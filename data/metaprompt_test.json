@@ -1,0 +1,327 @@
+[
+  {
+    "Session": 1,
+    "input": "what is the capital of france?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 1,
+    "input": "what is its currency",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 2,
+    "input": "what is cleverstory",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 2,
+    "input": "how does it integrate with hubspot?",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 3,
+    "input": "who is michael jackson?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 3,
+    "input": "where was he born",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 4,
+    "input": "how does iadb use seek",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 4,
+    "input": "explain in detail",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 5,
+    "input": "how is paperflite and highspot different",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 5,
+    "input": "how is cleverstory and ceros different",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 6,
+    "input": "where is bill gates from",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 6,
+    "input": "when was he born",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 7,
+    "input": "is cooper a cat or a dog?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 7,
+    "input": "who is the cat in the paperflite office?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 8,
+    "input": "what are all the integrations that paperflite offers?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 8,
+    "input": "can it integrate with salesforce",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 9,
+    "input": "how does deal insights work?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 9,
+    "input": "can you explain the above response in detail",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 10,
+    "input": "does seek use open ai or anthropic?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 10,
+    "input": "which of them are better at code related tasks",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 11,
+    "input": "does the optimise layout feature in cleverstory use ai?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 11,
+    "input": "is it a rule based calculation",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 11,
+    "input": "if i run the feature on the same website twice will it give the same results",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 12,
+    "input": "what are the components of the seek rag architecture",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 12,
+    "input": "does seek use pinecone",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 12,
+    "input": "what llm does it use",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 13,
+    "input": "can two users edit the same storyboard at the same time?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 13,
+    "input": "what is the acquire lock feature",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 13,
+    "input": "does cleverstory have auto save feature?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 14,
+    "input": "what is the difference between streams and collections?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 14,
+    "input": "what are the different types of collection viewers in paperflite",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 14,
+    "input": "which of these viewers is best for salespeople?",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 15,
+    "input": "what are the different custom fields in my account?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 15,
+    "input": "which assets have the custom field of content tracking?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 15,
+    "input": "where can i see the custom fields of an asset",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 16,
+    "input": "what is masala dosa?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 16,
+    "input": "where was it discovered",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 16,
+    "input": "which ingredients are used to make it",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 16,
+    "input": "what is its other name?",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 16,
+    "input": "is rice used while making it",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 17,
+    "input": "how does seek enhance paperflite",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 17,
+    "input": "when was seek introduced in paperflite",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 17,
+    "input": "explain in detail",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 17,
+    "input": "how can i access seek?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 17,
+    "input": "where are the seek answers stored",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 18,
+    "input": "what are the different types of cleverstory storyboards",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 18,
+    "input": "where can i display assets in a storyboard?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 18,
+    "input": "will assets in the content manager be seek indexed by default",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 18,
+    "input": "explain the above answer in detail",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 18,
+    "input": "what are the different widgets in cleverstory",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 19,
+    "input": "summarise this asset",
+    "expected_output": "Summary"
+  },
+  {
+    "Session": 19,
+    "input": "explain in fewer bullet points",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 19,
+    "input": "who edited this publication",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 20,
+    "input": "which country has the highest gdp in north america?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 20,
+    "input": "summarise this asset in detail",
+    "expected_output": "Summary"
+  },
+  {
+    "Session": 20,
+    "input": "does brazil have a higher gdp than argentina",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 21,
+    "input": "what is the algorithm used in deal insights?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 21,
+    "input": "explain in detail",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 21,
+    "input": "summarise this document",
+    "expected_output": "Summary"
+  },
+  {
+    "Session": 22,
+    "input": "what is the data protection policy of paperflite?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 22,
+    "input": "does it conform to gdpr",
+    "expected_output": "Follow up"
+  },
+  {
+    "Session": 22,
+    "input": "summarise this conversation",
+    "expected_output": "Summary"
+  },
+  {
+    "Session": 23,
+    "input": "what is paperflite",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 23,
+    "input": "what is cleverstory?",
+    "expected_output": "Question"
+  },
+  {
+    "Session": 23,
+    "input": "can you compare them",
+    "expected_output": "Follow up"
+  }
+]

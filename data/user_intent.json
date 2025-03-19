@@ -1,0 +1,230 @@
+[
+    {
+        "input": "What colors does this phone come in?",
+        "expected_output": "Product Inquiry"
+    },
+    {
+        "input": "How much does this laptop cost?",
+        "expected_output": "Product Inquiry"
+    },
+    {
+        "input": "Is this item available in your London store?",
+        "expected_output": "Product Inquiry"
+    },
+    {
+        "input": "Can I get a student discount on this?",
+        "expected_output": "Product Inquiry"
+    },
+    {
+        "input": "Does this camera support 4K recording?",
+        "expected_output": "Product Inquiry"
+    },
+    {
+        "input": "What’s the battery life of this smartwatch?",
+        "expected_output": "Product Inquiry"
+    },
+    {
+        "input": "Is there a warranty included with this product?",
+        "expected_output": "Product Inquiry"
+    },
+    {
+        "input": "Do you have a return policy for electronics?",
+        "expected_output": "Product Inquiry"
+    },
+    {
+        "input": "Are there any bundle deals for this tablet?",
+        "expected_output": "Product Inquiry"
+    },
+    {
+        "input": "What’s the difference between this model and the Pro version?",
+        "expected_output": "Product Inquiry"
+    },
+    {
+        "input": "Is this available for same-day delivery?",
+        "expected_output": "Product Inquiry"
+    },
+    {
+        "input": "Can I get a free trial of this software?",
+        "expected_output": "Product Inquiry"
+    },
+    {
+        "input": "How does this compare to the previous version?",
+        "expected_output": "Product Inquiry"
+    },
+    {
+        "input": "What’s the maximum storage capacity of this phone?",
+        "expected_output": "Product Inquiry"
+    },
+    {
+        "input": "Do you offer financing options for this laptop?",
+        "expected_output": "Product Inquiry"
+    },
+    {
+        "input": "Does this product require a subscription?",
+        "expected_output": "Product Inquiry"
+    },
+    {
+        "input": "Can I use this appliance with a 220V power supply?",
+        "expected_output": "Product Inquiry"
+    },
+    {
+        "input": "Does this chair come fully assembled?",
+        "expected_output": "Product Inquiry"
+    },
+    {
+        "input": "Is there an extended warranty option?",
+        "expected_output": "Product Inquiry"
+    },
+    {
+        "input": "My computer won’t turn on. What should I do?",
+        "expected_output": "Technical Support"
+    },
+    {
+        "input": "The app keeps crashing on startup. Can you help?",
+        "expected_output": "Technical Support"
+    },
+    {
+        "input": "Why is my internet so slow all of a sudden?",
+        "expected_output": "Technical Support"
+    },
+    {
+        "input": "I forgot my account password. How do I reset it?",
+        "expected_output": "Technical Support"
+    },
+    {
+        "input": "My Bluetooth headphones aren’t connecting to my phone.",
+        "expected_output": "Technical Support"
+    },
+    {
+        "input": "The printer is showing a paper jam error. What now?",
+        "expected_output": "Technical Support"
+    },
+    {
+        "input": "My phone screen is flickering. What could be the issue?",
+        "expected_output": "Technical Support"
+    },
+    {
+        "input": "How do I install the latest firmware update?",
+        "expected_output": "Technical Support"
+    },
+    {
+        "input": "The battery on my laptop drains too fast. Any fix?",
+        "expected_output": "Technical Support"
+    },
+    {
+        "input": "I keep getting error code 403 on my account. What does it mean?",
+        "expected_output": "Technical Support"
+    },
+    {
+        "input": "Why won’t my smart TV connect to Wi-Fi?",
+        "expected_output": "Technical Support"
+    },
+    {
+        "input": "My tablet keeps freezing. How can I fix this?",
+        "expected_output": "Technical Support"
+    },
+    {
+        "input": "The sound on my phone is distorted. Any troubleshooting tips?",
+        "expected_output": "Technical Support"
+    },
+    {
+        "input": "The website isn’t loading on my browser. Is it down?",
+        "expected_output": "Technical Support"
+    },
+    {
+        "input": "I need help configuring my router settings.",
+        "expected_output": "Technical Support"
+    },
+    {
+        "input": "My smartwatch won’t sync with my phone. What do I do?",
+        "expected_output": "Technical Support"
+    },
+    {
+        "input": "The software update failed halfway. What should I try next?",
+        "expected_output": "Technical Support"
+    },
+    {
+        "input": "My gaming console keeps overheating. Any solutions?",
+        "expected_output": "Technical Support"
+    },
+    {
+        "input": "My streaming service keeps buffering. How do I fix it?",
+        "expected_output": "Technical Support"
+    },
+    {
+        "input": "When will my package arrive?",
+        "expected_output": "Order Status"
+    },
+    {
+        "input": "What’s my tracking number?",
+        "expected_output": "Order Status"
+    },
+    {
+        "input": "Has my order been shipped yet?",
+        "expected_output": "Order Status"
+    },
+    {
+        "input": "Can I change the delivery address for my order?",
+        "expected_output": "Order Status"
+    },
+    {
+        "input": "My order is delayed. When will it be delivered?",
+        "expected_output": "Order Status"
+    },
+    {
+        "input": "The tracking link is not working. Can you help?",
+        "expected_output": "Order Status"
+    },
+    {
+        "input": "My order says 'out for delivery' but hasn’t arrived. Why?",
+        "expected_output": "Order Status"
+    },
+    {
+        "input": "I received a damaged product. What should I do?",
+        "expected_output": "Order Status"
+    },
+    {
+        "input": "Can I cancel my order before it ships?",
+        "expected_output": "Order Status"
+    },
+    {
+        "input": "I ordered two items, but only one was delivered. Where’s the other?",
+        "expected_output": "Order Status"
+    },
+    {
+        "input": "My order status is ‘pending’. What does that mean?",
+        "expected_output": "Order Status"
+    },
+    {
+        "input": "Do you offer express shipping?",
+        "expected_output": "Order Status"
+    },
+    {
+        "input": "I never received a confirmation email. Was my order placed?",
+        "expected_output": "Order Status"
+    },
+    {
+        "input": "How do I return a product?",
+        "expected_output": "Order Status"
+    },
+    {
+        "input": "Will I get a refund if I return my order?",
+        "expected_output": "Order Status"
+    },
+    {
+        "input": "What are the delivery time estimates for my location?",
+        "expected_output": "Order Status"
+    },
+    {
+        "input": "I entered the wrong shipping address. Can I update it?",
+        "expected_output": "Order Status"
+    },
+    {
+        "input": "My package was marked as delivered, but I never got it.",
+        "expected_output": "Order Status"
+    },
+    {
+        "input": "The delivery date changed. Why?",
+        "expected_output": "Order Status"
+    }
+]
