@@ -2,8 +2,10 @@ import streamlit as st
 from openai import OpenAI
 import pandas as pd
 import json
-import matplotlib.pyplot as plt
 import logging
+from datetime import datetime
+import plotly.graph_objects as go
+
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
@@ -43,12 +45,6 @@ task_description = st.text_area(
     "Describe the task you want to optimize a prompt for:",
     height=100,
     placeholder="Example: Classify customer emails as either 'Complaint', 'Question', or 'Feedback'",
-)
-
-starter_prompt = st.text_area(
-    "Starter Prompt (Optional):",
-    height=150,
-    placeholder="Enter an initial prompt to start with, or leave blank for auto-generation",
 )
 
 st.header("Test Data")
@@ -102,11 +98,23 @@ def call_openai(prompt, model=selected_model, temperature=0.0):
 
 def generate_initial_prompt(task_description):
     system_prompt = f"""
-    I need a high-quality initial prompt for the following task:
+    You are an expert in prompt engineering, skilled in crafting precise, effective, and well-structured prompts to optimize responses from language models. 
+    Your task is to generate an initial prompt for a given task description by following best practices in prompt engineering.
     
+    Guidelines to Follow:
+    * Write Clear Instructions: In order to get a highly relevant response, make sure that requests provide any important details or context. Otherwise you are leaving it up to the model to guess what you mean.
+    * Ask the model to adopt a persona: The system message can be used to specify the persona used by the model in its replies.
+    * Use delimiters to clearly indicate distinct parts of the input: Delimiters like triple quotation marks, XML tags, section titles, etc. can help demarcate sections of text to be treated differently.
+    * Specify the steps required to complete a task: Some tasks are best specified as a sequence of steps. Writing the steps out explicitly can make it easier for the model to follow them.
+    * Provide examples: Providing general instructions that apply to all examples is generally more efficient than demonstrating all permutations of a task by example, but in some cases providing examples may be easier.
+    * Since the prompt will be a system prompt, do not provide a placeholder to add user query. That will be added in another separate message.
+    
+    Input:
+    The task to generate the initial prompt for is:
     {task_description}
-    
-    Create a concise, clear, and effective prompt that would help an LLM perform this task well.
+
+
+    Output:
     Return only the prompt text without additional commentary.
     """
 
@@ -212,7 +220,6 @@ IMPROVED PROMPT:
 def optimize_prompt(
     task_description,
     test_data,
-    starter_prompt=None,
     max_iterations=5,
     accuracy_threshold=95,
 ):
@@ -222,12 +229,10 @@ def optimize_prompt(
     reflections = []
     all_evaluation_results = []
 
-    current_prompt = starter_prompt
-    if not current_prompt:
-        with st.spinner("Generating initial prompt..."):
-            current_prompt = generate_initial_prompt(task_description)
-            st.info("Generated initial prompt")
-            logger.info("Generated initial prompt.")
+    with st.spinner("Generating initial prompt..."):
+        current_prompt = generate_initial_prompt(task_description)
+        st.info("Generated initial prompt")
+        logger.info("Generated initial prompt.")
 
     progress_bar = st.progress(0)
     iteration_header = st.empty()
@@ -292,13 +297,29 @@ def optimize_prompt(
         }
     )
 
-    fig, ax = plt.subplots(figsize=(10, 6))
-    ax.plot(iterations, accuracies, marker="o", linestyle="-", color="blue")
-    ax.set_xlabel("Iteration")
-    ax.set_ylabel("Accuracy (%)")
-    ax.set_title("Prompt Optimization Progress")
-    ax.grid(True)
-    st.pyplot(fig)
+    fig = go.Figure()
+
+    fig.add_trace(
+        go.Scatter(
+            x=iterations,
+            y=accuracies,
+            mode="lines+markers",
+            marker=dict(color="blue"),
+            line=dict(color="blue"),
+            hovertemplate="Iteration: %{x}<br>Accuracy: %{y:.2f}%<extra></extra>",
+        )
+    )
+
+    fig.update_layout(
+        title="Prompt Optimization Progress",
+        xaxis_title="Iteration",
+        yaxis_title="Accuracy (%)",
+        xaxis=dict(tickmode="linear", tick0=0, dtick=1),
+        showlegend=False,
+        template="plotly_white",
+    )
+
+    st.plotly_chart(fig)
 
     best_idx = accuracies.index(max(accuracies))
     st.header("Best Prompt")
@@ -313,7 +334,7 @@ def optimize_prompt(
     st.download_button(
         label="Download Results as CSV",
         data=results_df.to_csv(index=False),
-        file_name="prompt_optimization_results.csv",
+        file_name=f"prompt_optimization_results_{datetime.now().isoformat()}.csv",
         mime="text/csv",
     )
 
@@ -329,7 +350,6 @@ if st.button(
         best_prompt, best_accuracy, results = optimize_prompt(
             task_description=task_description,
             test_data=test_data,
-            starter_prompt=starter_prompt,
             max_iterations=max_iterations,
             accuracy_threshold=accuracy_threshold,
         )
