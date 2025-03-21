@@ -118,12 +118,8 @@ def evaluate_prompt(prompt, test_data):
         actual_answer = call_openai(messages=messages)
 
         is_correct = evaluate_answer(question, expected_answer, actual_answer)
-        # if is_correct:
-        #     correct += 1
-            
-        # [ ] Using this to test if reflection is working. change it later
-        is_correct = 0
-        
+        if is_correct:
+            correct += 1
         
         results.append({
             "question": question,
