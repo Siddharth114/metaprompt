@@ -1,6 +1,7 @@
 import json
 import logging
 import time
+import re
 
 from utils.openai_utils import call_openai
 
@@ -128,6 +129,7 @@ def evaluate_prompt(prompt, test_data):
 
         start_time = time.time()
         actual_answer, response_prompt_tokens, response_completion_tokens = call_openai(messages=messages)
+        actual_answer = re.sub(r"\[Source \d+\]", "", actual_answer)
         end_time = time.time()
         
         response_time = end_time - start_time
