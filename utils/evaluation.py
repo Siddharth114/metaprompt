@@ -1,6 +1,8 @@
-import logging
-from utils.openai_utils import call_openai
 import json
+import logging
+import time
+
+from utils.openai_utils import call_openai
 
 logger = logging.getLogger(__name__)
 
@@ -106,6 +108,8 @@ Ensure you fully understand the criteria before starting the evaluation. Use the
 def evaluate_prompt(prompt, test_data):
     results = []
     correct = 0
+    response_times = []
+    evaluation_times = []
     
     logger.info(f"Evaluating prompt with {len(test_data)} test cases.")
     for test_case in test_data:
@@ -115,9 +119,22 @@ def evaluate_prompt(prompt, test_data):
 
         messages = [{"role": "system", "content": prompt}, {"role": "user", "content":json.dumps(input_text)}]
 
+        start_time = time.time()
         actual_answer = call_openai(messages=messages)
+        end_time = time.time()
+        
+        response_time = end_time - start_time
+        
+        response_times.append(response_time)
 
+        start_time = time.time()
         is_correct = evaluate_answer(question, expected_answer, actual_answer)
+        end_time = time.time()
+        
+        evaluation_time = end_time - start_time
+        
+        evaluation_times.append(evaluation_time)
+        
         if is_correct:
             correct += 1
         
@@ -126,8 +143,18 @@ def evaluate_prompt(prompt, test_data):
             "expected": expected_answer,
             "actual": actual_answer,
             "correct": is_correct,
+            "response_time": response_time,
+            "evaluation_time": evaluation_time
         })
 
     accuracy = (correct / len(test_data)) * 100
-    logger.info(f"Evaluation completed. Accuracy: {accuracy:.2f}%")
-    return accuracy, results
+    logger.info("Evaluation completed.")
+    logger.info(f"Accuracy: {accuracy:.2f}%")
+    
+    average_response_time = round(sum(response_times) / len(response_times), 2)
+    average_evaluation_time = round(sum(evaluation_times) / len(evaluation_times), 2)
+    
+    
+    logger.info(f"Average response time per test case: {average_response_time} seconds")
+    logger.info(f"Average evaluation time per test case: {average_evaluation_time} seconds")
+    return accuracy, results, average_response_time, average_evaluation_time

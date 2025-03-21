@@ -2,6 +2,7 @@ import json
 import logging
 import streamlit as st
 import pandas as pd
+import time
 from utils.initial_prompt import generate_initial_prompt
 from utils.evaluation import evaluate_prompt
 from utils.openai_utils import call_openai
@@ -79,11 +80,17 @@ def optimize_prompt(test_data, max_iterations=5, accuracy_threshold=95, reflecti
     prompts = []
     reflections = []
     all_evaluation_results = []
+    
+    average_response_times = []
+    average_evaluation_times = []
+    reflection_times = []
 
     with st.spinner("Generating initial prompt..."):
+        start_time = time.time()
         current_prompt = generate_initial_prompt()
+        end_time = time.time()
         st.info("Generated initial prompt")
-        logger.info("Generated initial prompt.")
+        logger.info(f"Generated initial prompt in {end_time - start_time:.2f} seconds.")
 
     progress_bar = st.progress(0)
     iteration_header = st.empty()
@@ -103,18 +110,20 @@ def optimize_prompt(test_data, max_iterations=5, accuracy_threshold=95, reflecti
         )
 
         with st.spinner(f"Evaluating prompt on test data... (Iteration {i+1})"):
-            accuracy, evaluation_results = evaluate_prompt(
+            accuracy, evaluation_results, average_response_time, average_evaluation_time = evaluate_prompt(
                 current_prompt, test_data
             )
 
         accuracies.append(accuracy)
         prompts.append(current_prompt)
         all_evaluation_results.append(evaluation_results)
+        average_response_times.append(average_response_time)
+        average_evaluation_times.append(average_evaluation_time)
 
         accuracy_container.metric("Accuracy", f"{accuracy:.2f}%")
 
         evaluation_df = pd.DataFrame(evaluation_results)
-        evaluation_container.dataframe(evaluation_df)
+        evaluation_container.dataframe(evaluation_df.drop(columns=["response_time", "evaluation_time"]))
 
         if accuracy >= accuracy_threshold:
             st.success(
@@ -127,9 +136,14 @@ def optimize_prompt(test_data, max_iterations=5, accuracy_threshold=95, reflecti
             break
 
         with st.spinner(f"Generating reflection and improvements... (Iteration {i+1})"):
+            start_time = time.time()
             reflection, improved_prompt = reflect_and_improve(
                 current_prompt, evaluation_results, accuracy, reflection_temperature
             )
+            end_time = time.time()
+            reflection_time = end_time - start_time
+            reflection_times.append(reflection_time)
+            logger.info(f"Generated reflection and improved prompt in {reflection_time:.2f} seconds.")
 
         reflections.append(reflection)
         reflection_container.markdown(f"### Reflection\n{reflection}")
@@ -143,6 +157,9 @@ def optimize_prompt(test_data, max_iterations=5, accuracy_threshold=95, reflecti
         "Accuracy": accuracies[:i+1],
         "Prompt": prompts[:i+1],
         "Reflection": reflections[:i+1],
+        "Average Response Time": average_response_times[:i+1],
+        "Average Evaluation Time": average_evaluation_times[:i+1],
+        "Reflection Times": reflection_times[:i+1]
     })
     
     return prompts[accuracies.index(max(accuracies))], max(accuracies), results_df
