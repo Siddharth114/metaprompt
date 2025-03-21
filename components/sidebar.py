@@ -7,7 +7,7 @@ def render_sidebar():
     st.sidebar.header("Optimization Parameters")
     
     max_iterations = st.sidebar.slider(
-        "Maximum Iterations:", min_value=1, max_value=20, value=5
+        "Maximum Iterations:", min_value=1, max_value=20, value=2
     )
     
     accuracy_threshold = st.sidebar.slider(
