@@ -193,4 +193,4 @@ def optimize_prompt(test_data, max_iterations=5, accuracy_threshold=95, reflecti
         "Reflection Completion Tokens": all_reflection_completion_tokens[:i+1]
     })
     
-    return prompts[accuracies.index(max(accuracies))], max(accuracies), results_df
+    return prompts[accuracies.index(max(accuracies))], max(accuracies), results_df, all_evaluation_results

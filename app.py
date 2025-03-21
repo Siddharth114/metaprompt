@@ -25,14 +25,13 @@ def main():
     if st.button("Start Optimization", disabled=(test_data is None)):
         with st.spinner("Optimizing..."):
             logger.info("Starting optimization process.")
-            best_prompt, best_accuracy, results = optimize_prompt(
+            best_prompt, best_accuracy, results, all_evaluation_results = optimize_prompt(
                 test_data=test_data,
                 max_iterations=params["max_iterations"],
                 accuracy_threshold=params["accuracy_threshold"],
                 reflection_temperature=params["reflection_temperature"],
             )
-            
-            display_optimization_results(best_prompt, best_accuracy, results)
+            display_optimization_results(best_prompt, best_accuracy, results, all_evaluation_results)
             
             logger.info("Optimization process completed successfully.")
 
