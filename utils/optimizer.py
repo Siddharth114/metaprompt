@@ -10,7 +10,7 @@ from utils.openai_utils import call_openai
 logger = logging.getLogger(__name__)
 
 
-def reflect_and_improve(prompt, evaluation_results, task_description, accuracy, model, temperature):
+def reflect_and_improve(prompt, evaluation_results, accuracy, temperature):
     reflection_prompt = f"""
     You are an AI prompt optimizer designed to iteratively improve prompts based on testing results. Your goal is to analyze the effectiveness of the current prompt in achieving the given task, identify what is working and what is not based on the provided accuracy and testing results, and generate an improved prompt.
 
@@ -35,7 +35,10 @@ def reflect_and_improve(prompt, evaluation_results, task_description, accuracy, 
 
     Inputs:
 
-    Task: {task_description}
+    Task: 
+    
+    The LLM receiving this system prompt will be responsible for generating answers to user queries based on retrieved contextual information from a vector database. 
+    The goal is to answer the user’s question accurately using only the provided context and cite sources appropriately.
         
     Current Prompt:
     "{prompt}"
@@ -56,7 +59,9 @@ def reflect_and_improve(prompt, evaluation_results, task_description, accuracy, 
     """
 
     logger.info("Generating reflection and improved prompt.")
-    response = call_openai(reflection_prompt, model=model, temperature=temperature)
+    
+    messages = [{"role": "system", "content": reflection_prompt}]
+    response = call_openai(messages=messages, temperature=temperature)
 
     try:
         reflection_part = response.split("REFLECTION:")[1].split("IMPROVED PROMPT:")[0].strip()
@@ -68,7 +73,7 @@ def reflect_and_improve(prompt, evaluation_results, task_description, accuracy, 
         st.warning("Couldn't parse reflection response properly. Using raw response.")
         return response, prompt
 
-def optimize_prompt(task_description, test_data, max_iterations=5, accuracy_threshold=95, reflection_temperature=1.0, model="gpt-4o-mini"):
+def optimize_prompt(test_data, max_iterations=5, accuracy_threshold=95, reflection_temperature=1.0):
     iterations = list(range(1, max_iterations + 1))
     accuracies = []
     prompts = []
@@ -76,7 +81,7 @@ def optimize_prompt(task_description, test_data, max_iterations=5, accuracy_thre
     all_evaluation_results = []
 
     with st.spinner("Generating initial prompt..."):
-        current_prompt = generate_initial_prompt(task_description, model)
+        current_prompt = generate_initial_prompt()
         st.info("Generated initial prompt")
         logger.info("Generated initial prompt.")
 
@@ -99,7 +104,7 @@ def optimize_prompt(task_description, test_data, max_iterations=5, accuracy_thre
 
         with st.spinner(f"Evaluating prompt on test data... (Iteration {i+1})"):
             accuracy, evaluation_results = evaluate_prompt(
-                current_prompt, test_data, model
+                current_prompt, test_data
             )
 
         accuracies.append(accuracy)
@@ -118,11 +123,12 @@ def optimize_prompt(task_description, test_data, max_iterations=5, accuracy_thre
             logger.info(
                 f"Accuracy threshold of {accuracy_threshold}% reached. Optimization complete."
             )
+            reflections.append(f"Accuracy threshold of {accuracy_threshold}% reached.")
             break
 
         with st.spinner(f"Generating reflection and improvements... (Iteration {i+1})"):
             reflection, improved_prompt = reflect_and_improve(
-                current_prompt, evaluation_results, task_description, accuracy, model, reflection_temperature
+                current_prompt, evaluation_results, accuracy, reflection_temperature
             )
 
         reflections.append(reflection)
@@ -133,10 +139,10 @@ def optimize_prompt(task_description, test_data, max_iterations=5, accuracy_thre
         progress_bar.progress((i + 1) / max_iterations)
     
     results_df = pd.DataFrame({
-        "Iteration": iterations,
-        "Accuracy": accuracies,
-        "Prompt": prompts,
-        "Reflection": reflections,
+        "Iteration": iterations[:i+1],
+        "Accuracy": accuracies[:i+1],
+        "Prompt": prompts[:i+1],
+        "Reflection": reflections[:i+1],
     })
     
     return prompts[accuracies.index(max(accuracies))], max(accuracies), results_df

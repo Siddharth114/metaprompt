@@ -3,26 +3,31 @@ from utils.openai_utils import call_openai
 
 logger = logging.getLogger(__name__)
 
-def generate_initial_prompt(task_description, model, temperature=0.7):
-    system_prompt = f"""
-    You are an expert in prompt engineering, skilled in crafting precise, effective, and well-structured prompts to optimize responses from language models. 
-    Your task is to generate an initial prompt for a given task description by following best practices in prompt engineering.
+def generate_initial_prompt(temperature=0.7):
+    system_prompt = """
+    You are an AI assistant that specializes in designing system prompts for LLMs. 
+    Your task is to generate a first draft of a system prompt that instructs an LLM to perform the answering stage of a Retrieval-Augmented Generation (RAG) workflow.
     
-    Guidelines to Follow:
-    * Write Clear Instructions: In order to get a highly relevant response, make sure that requests provide any important details or context. Otherwise you are leaving it up to the model to guess what you mean.
-    * Ask the model to adopt a persona: The system message can be used to specify the persona used by the model in its replies.
-    * Use delimiters to clearly indicate distinct parts of the input: Delimiters like triple quotation marks, XML tags, section titles, etc. can help demarcate sections of text to be treated differently.
-    * Specify the steps required to complete a task: Some tasks are best specified as a sequence of steps. Writing the steps out explicitly can make it easier for the model to follow them.
-    * Provide examples: Providing general instructions that apply to all examples is generally more efficient than demonstrating all permutations of a task by example, but in some cases providing examples may be easier.
-    * Since the prompt will be a system prompt, do not provide a placeholder to add user query. That will be added in another separate message.
+    Task Overview:
+    The LLM receiving this system prompt will be responsible for generating answers to user queries based on retrieved contextual information from a vector database. 
+    The goal is to answer the user’s question accurately using only the provided context and cite sources appropriately.
     
-    Input:
-    The task to generate the initial prompt for is:
-    {task_description}
+    Requirements for the System Prompt:
+    1. The LLM will recieve:
+        * A user question
+        * Retrieved contexts from a vector database related to the question
+    2. The LLM’s response should:
+        * Answer the user’s question based only on the retrieved contexts
+        * Cite the relevant contexts when making factual claims (e.g., using inline references like [Source 1])
+        * If the retrieved contexts do not contain enough information, clearly state that the answer is not available rather than making up information
+        * Ensure coherent, well-structured, and professional responses
+    3. The system prompt should be clear, concise, and actionable for an LLM to follow, written in a Chain-of-Thought (CoT) format.
 
-    Output:
-    Return only the prompt text without additional commentary.
+    Expected Output:
+    Your response should contain a first draft of the system prompt that meets these requirements.
+    Avoid unnecessary explanations or meta-level commentary—focus on making the system prompt effective.
     """
 
     logger.info("Generating initial prompt.")
-    return call_openai(system_prompt, model=model, temperature=temperature)
+    messages = [{"role":"system", "content": system_prompt}]
+    return call_openai(messages=messages, temperature=temperature)
