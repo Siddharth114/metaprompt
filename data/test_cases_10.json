@@ -1,0 +1,238 @@
+[
+    {
+        "input": {
+            "question": "Are latin american cultures more likely to share",
+            "contexts": [
+                {
+                    "id": 1,
+                    "text": "Access to digital infrastructure is key to socioeconomic development. Nevertheless, more than 60 percent of the population of Latin America and the Caribbean lack access to quality digital infrastructure. One of the instruments with the greatest potential to reduce the cost of deployments and thus make private sector investment is infrastructure sharing viable, both among telecommunications operators and with operators of other infrastructure (electricity, roads, gas, among others). This document analyzes the benefits derived from sharing as well as the regulatory and legal implications, and presents potential models to implement this strategy in the region.<br/><br/>URL: https://publications.iadb.org/publications/english/document/Digital-Transformation-Infrastructure-Sharing-in-Latin-America-and-the-Caribbean.pdf"
+                },
+                {
+                    "id": 2,
+                    "text": "Yet, for those with lower income in these locations, broadband access costs can be unaffordable."
+                },
+                {
+                    "id": 3,
+                    "text": "The position of the countries of the region around the possible gender gap in internet access reflects similar behavior to developed countries with very high levels of internet access equality."
+                },
+                {
+                    "id": 4,
+                    "text": "There is an analysis on sharing with the electricity sector and opportunities in four countries of the region (Honduras, Ecuador, Paraguay, and the Dominican Republic) are analyzed."
+                }
+            ]
+        },
+        "expected_output": "I cannot answer your query because I do not have enough information."
+    },
+    {
+        "input": {
+            "question": "Can you proofread and reword the below workflow outline?",
+            "contexts": [
+                {
+                    "id": 1,
+                    "text": "**Executive Summary**\n\nTransPerfect, founded in 1992 by Phil Shawe, has evolved from a dorm room startup into the world's largest language services provider, boasting over 9,500 full-time employees and a network of 10,000 certified linguists. With a commitment to quality and innovation, TransPerfect has achieved significant milestones, including ISO certifications and a revenue exceeding $1 billion in 2021. The company\u2019s flagship GlobalLink technology streamlines complex translation projects, ensuring timely and accurate delivery for global businesses.\n\nTransPerfect serves a diverse clientele across various industries, including life sciences, legal, technology, and media, providing tailored solutions that enhance their clients' global competitiveness. The company\u2019s mission emphasizes exceptional client service, scalability, and a robust quality management system, which is regularly audited to maintain high standards.\n\nIn addition to its operational excellence, TransPerfect is dedicated to corporate social responsibility, implementing sustainable practices and fostering diversity and inclusion within its workforce. The company actively engages in community initiatives and partnerships, reflecting its commitment to social impact.\n\nAs TransPerfect continues to innovate and expand its global footprint, it remains focused on delivering unparalleled language solutions that empower clients to navigate the complexities of international markets effectively. With a strong foundation and a forward-thinking approach, TransPerfect is poised for continued growth and success in the ever-evolving landscape of language services."
+                },
+                {
+                    "id": 2,
+                    "text": "\u2022 Initial Client Review : For projects intended for distribution , prior to initiating the full translation process , a [ * * insert CLIENT NAME here * * ] review of selected sample text can be performed to allow us to refine the style and tone to precisely convey"
+                },
+                {
+                    "id": 3,
+                    "text": "Final Quality Check: A total review of the project is performed, giving a final eye for consistency, accuracy, and design integrity."
+                },
+                {
+                    "id": 4,
+                    "text": "As part of this pre-flight process, we can proofread all previously translated content, including translation memory, to ensure overall quality and consistency before incorporating it into [**insert CLIENT NAME here**]\u2019s master database."
+                }
+            ]
+        },
+        "expected_output": "**Workflow Outline**  \\n\\n**1. Overview of the Assistant**  \\nThe assistant, SEEK, developed by Paperflite, is designed to provide concise answers to straightforward questions while offering detailed responses to more complex and open-ended inquiries based on the provided context. It is equipped to assist with writing, analysis, and answering questions, but it does not disclose its operational details unless directly relevant to the inquiry.\\n\\n**2. Executive Summary**  \\nTransPerfect, established in 1992 by Phil Shawe, has transformed from a dorm room startup into the largest language services provider globally, employing over 9,500 full-time staff and collaborating with a network of 10,000 certified linguists. Committed to quality and innovation, TransPerfect has achieved significant milestones, including ISO certifications and surpassing $1 billion in revenue in 2021. The company\u2019s flagship technology, GlobalLink, simplifies complex translation projects, ensuring timely and accurate delivery for international businesses.\\n\\nTransPerfect caters to a diverse range of industries, including life sciences, legal, technology, and media, offering customized solutions that enhance clients' global competitiveness. The company\u2019s mission focuses on exceptional client service, scalability, and a robust quality management system, which is regularly audited to uphold high standards.\\n\\nIn addition to operational excellence, TransPerfect is dedicated to corporate social responsibility, implementing sustainable practices and promoting diversity and inclusion within its workforce. The company actively participates in community initiatives and partnerships, reflecting its commitment to social impact.\\n\\nAs TransPerfect continues to innovate and expand its global presence, it remains dedicated to delivering unparalleled language solutions that empower clients to navigate the complexities of international markets effectively. With a solid foundation and a forward-thinking approach, TransPerfect is well-positioned for ongoing growth and success in the dynamic landscape of language services.\\n\\n**3. Initial Client Review**  \\nBefore commencing the full translation process for projects intended for distribution, a review of selected sample text by [**insert CLIENT NAME here**] can be conducted. This allows us to refine the style and tone to accurately convey your message.\\n\\n**4. Production**  \\n- **Text Translation:**  \\nThis phase involves creating a translation from the source language to the target language that is suitable for the intended audience. Our objective is not merely to translate literally but to ensure that the original nuances and tone are preserved, conveying the original message without compromise.\\n\\n- **Proofreading:**  \\nWe maintain a consistently high level of quality by thoroughly proofreading the translated text. This task is performed by an experienced native speaker of the target language who possesses expertise in the specific subject matter.\\n\\n- **Adjustment for Language Characteristics:**  \\nDuring production, we examine the stylistic layout of the translated text, aiming to minimize changes in graphical elements or text sections. For instance, translating English text into French, Spanish, or Portuguese typically results in a 20\u201325% increase in word count, which can affect the design and layout of the final product.\\n\\n- **Cultural Consulting:**  \\nUpon request, we consider the potential cultural impact of color schemes, layouts, and iconography within the target culture. This process helps avoid cultural missteps that could hinder success or lead to negative perceptions in international markets.\\n\\n**5. Post-Production**  \\n- **Integration:**  \\nLanguage is reinserted into the design files or original format, either from pure text or with the assistance of automated tools. We review the overall cohesion of the project.\\n\\n- **Sampling:**  \\nSampling involves monitoring both the language and formatting of the project for accuracy and quality throughout all phases, from initiation to completion.\\n\\n- **Final Quality Check:**  \\nA comprehensive review of the project is conducted to ensure consistency, accuracy, and design integrity.\\n\\n**6. Assessment**  \\n- **Project Assessment:**  \\nAfter files have been transmitted to [**insert CLIENT NAME here**], a thorough review is conducted to evaluate whether goals and deadlines were met, identifying which elements of the production process were completed satisfactorily and which areas offered opportunities for improvement.\\n\\n- **Client Feedback:**  \\nWe solicit feedback from you to gain third-party insights into the overall success of the project and to ensure continuous improvement in TransPerfect\u2019s processes and operations.\\n\\n**7. Revisions and Updates**  \\n- **Monitoring:**  \\nMonitoring includes tailored processes to translate new or revised content and implement front- and back-end modifications. Through ongoing interaction with [**insert CLIENT NAME here**]\u2019s account manager, any additions or changes to the original content can be efficiently integrated into the translated versions.\\n\\n**8. Continuity of Translators**  \\nTransPerfect recognizes that continuity in personnel is crucial for long-term success. In cases where [**insert CLIENT NAME here**] consistently requires a specific language and/or subject matter, we will assemble a team of specialized linguists to handle all translation and proofreading tasks for projects submitted by [**insert CLIENT NAME here**]. This team will be carefully selected based on their linguistic skills and subject-matter expertise in the [**insert client\u2019s industry here**] field, ensuring familiarity with your organization\u2019s preferred terminology, style, and tone.\\n\\n**9. Project Management**  \\nAt the beginning of our partnership, TransPerfect will assign a dedicated project manager to oversee all aspects of production, including the selection and maintenance of the linguistic team. This individual will familiarize themselves with [**insert CLIENT NAME here**]\u2019s specific terminology and language requirements, effectively communicating these needs to your dedicated linguistic team. As part of this pre-flight process, we can proofread all previously translated content, including translation memory, to ensure overall quality and consistency before integrating it into [**insert CLIENT NAME here**]\u2019s master database."
+    },
+    {
+        "input": {
+            "question": "Does this talk about el nino",
+            "contexts": [
+                {
+                    "id": 1,
+                    "text": "The countries included are Argentina , Belize , Bolivia , Brazil , Chile , Colombia , Costa Rica , Dominican Republic , Ecuador , El Salvador , Guatemala , Haiti , Honduras , Jamaica , Mexico , Nicaragua , Panama , Paraguay , Peru , Trinidad and Tobago , Uruguay"
+                },
+                {
+                    "id": 2,
+                    "text": "\u2013 0.5 2.3 \u2013 1.3 2.0 1.7 % % \u2013 2.2 \u2013 2.7 1.1 \u2013 3.0 1.0 0.8 0.6 0.6 0.4 \u2013 4.1 0.2 \u2013 4.4 2023 2024 2023 2024 2023 2024 2023 2024 2023 2024 Colombia Ecuador Peru Colombia Peru Mild Strong Extraordinary Source : \u00c1lvarez et al ."
+                },
+                {
+                    "id": 3,
+                    "text": "Ecuador experienced significant agricultural and construction sector impacts, with the 1997-1998 ENSO causing unemployment and health risks."
+                }
+            ]
+        },
+        "expected_output": "Yes, the publication discusses the effects of the \"El Ni\u00f1o\" phenomenon on Andean countries, including changes in surface temperature, categorization of ENSO conditions, historical events, impacts on specific sectors, and estimated impacts on inflation and growth in 2024 . The report emphasizes the need for tailored approaches to counteract the economic implications of climatic phenomena and the importance of continuous monitoring and updating of El Ni\u00f1o effects ."
+    },
+    {
+        "input": {
+            "question": "For the SOP number MP1-004 what is the SOP Title?",
+            "contexts": [
+                {
+                    "id": 1,
+                    "text": "**Executive Summary**\n\nVericel Corporation's Biologics License Application (BLA) 125603 seeks approval for MACI (Autologous Cultured Chondrocytes on Porcine Collagen Membrane), a groundbreaking treatment designed for repairing focal lesions in knee articular cartilage. This innovative product combines expanded autologous chondrocytes with a resorbable porcine collagen membrane, creating a cellularized scaffold that promotes cartilage regeneration.\n\nThe review process, which commenced with the initial filing in December 2015, involved extensive communication between Vericel and regulatory reviewers, culminating in a comprehensive evaluation of the product's quality, safety, and efficacy. The primary review team, comprising experts in medical, toxicological, and product quality assessments, concluded that the manufacturing processes and controls meet the necessary standards for licensure.\n\nThe MACI product is characterized by a 3 cm x 5 cm cellular sheet, containing at least 500,000 chondrocytes per cm\u00b2, and is implanted directly into the cartilage defect, secured with fibrin glue. The manufacturing process, conducted at Vericel's facility in Cambridge, MA, and Matricel GmbH in Germany, adheres to stringent quality control measures, ensuring the safety and effectiveness of the product.\n\nPost-marketing commitments have been established to further enhance product quality, including the development of testing methodologies and acceptance criteria for the collagen membrane. Overall, BLA 125603 is deemed approvable, representing a significant advancement in regenerative medicine and offering hope for patients suffering from cartilage injuries."
+                },
+                {
+                    "id": 2,
+                    "text": "112 3.2.A.1 Facilities and Equipment ........................................................................................."
+                },
+                {
+                    "id": 3,
+                    "text": "ACI-Maix Membrane \u2013 MACI Device Constituent ACI-Maix Membrane, the device constituent supplied by Matricel, is a Risk Category 1 Inspection Class IV material."
+                },
+                {
+                    "id": 4,
+                    "text": "BLA # 125603 Autologous Cultured Chondrocytes \u2022 Provision, training, and/or realignment of resources \u2022 Recommendations for improvement Document: QA1-045 Quality Management Review, Revision A (dated 18JUN13)"
+                }
+            ]
+        },
+        "expected_output": "The SOP Title for the SOP number MP1-004 is \"Return Goods Authorization Procedure\" ."
+    },
+    {
+        "input": {
+            "question": "How can users access their Paperflite account from Gmail?",
+            "contexts": [
+                {
+                    "id": 1,
+                    "text": "This executive summary provides a comprehensive guide to setting up the Paperflite extension on Google Chrome, enabling users to seamlessly attach content via Gmail. The step-by-step instructions outline the process, from downloading the extension to utilizing it to enhance email communication. By following these simple tasks, users can integrate Paperflite into their Chrome browser, access their Paperflite account from Gmail, and attach relevant documents to their emails. The summary also highlights the benefits of using Paperflite, such as tracking the analytics of the sent assets.\n\nIn addition, the summary introduces a case study featuring SOS 168, Cambodia's latest specialized bank, which recently implemented Temenos T24 to offer specialized products and services to the SME banking space. The narrative captures the bank's mission to provide trust, convenience, and superior customer experience, emphasizing its focus on leveraging lending and accounting products in the Cambodian banking marketplace.\n\nThis executive summary serves as a valuable resource for individuals seeking to streamline their content sharing process through Gmail using the Paperflite extension, as well as for those interested in learning about the innovative banking solutions offered by SOS 168."
+                },
+                {
+                    "id": 2,
+                    "text": "SETTING UP IN GOOGLE CHROME"
+                },
+                {
+                    "id": 3,
+                    "text": "STEP 1 SETTING UP IN GOOGLE CHROME"
+                }
+            ]
+        },
+        "expected_output": "To access your Paperflite account from Gmail, follow these steps: 1. First, download the Paperflite extension from the Chrome Web Store by searching for 'Paperflite Extension' and clicking 'Add extension' . 2. Once added, click on the Paperflite extension icon in your browser menu and enter your Paperflite login credentials . 3. After logging in, go to your Gmail account. You should see a notification prompting you to 'Enhance' your emails . 4. Click on 'Enhance' to attach content from your Paperflite account . 5. Open a new email, and you will find a small icon at the bottom of the email window. Click on this icon to access your Paperflite Streams & Collections . 6. Select the document you wish to attach, and it will be included in your email . 7. Finally, enter your email text and send your email . This integration allows you to streamline your content sharing directly from Gmail."
+    },
+    {
+        "input": {
+            "question": "How did Paperflite's intervention impact the company's content strategy?",
+            "contexts": [
+                {
+                    "id": 1,
+                    "text": "The Paperflite case study showcases how a UK-based telecom company overcame content management challenges to enhance sales and marketing effectiveness. The company previously struggled with siloed content, hindering the sales teams' ability to access and deliver the right materials to prospects. This disconnect between sales and marketing impacted their operational synergy. However, with Paperflite's intervention, the company experienced a transformative shift. Paperflite provided invaluable insights into content performance, customer engagement, and sales team utilization. By understanding content performance metrics, customer behavior, and sales team preferences, the company could tailor content to match specific needs and interests. This data-driven approach not only optimized content but also inspired action, ultimately boosting sales. Through Paperflite, the company successfully unified its content strategy, aligning it with customer requirements and enhancing audience resonance. This case study serves as a testament to the power of leveraging technology to streamline content management, drive sales, and foster cohesive sales and marketing collaboration."
+                },
+                {
+                    "id": 2,
+                    "text": "PAPERFLITE CASE STUDY UNIFYING CONTENT ACROSS THE ENTERPRISE FOR TELECOMS"
+                }
+            ]
+        },
+        "expected_output": "Paperflite's intervention significantly transformed the company's content strategy by addressing the challenges of siloed content and enhancing the alignment between sales and marketing teams. Prior to Paperflite, the telecom company struggled with accessing and delivering the right materials to prospects, which hindered operational synergy . After implementing Paperflite, the company gained insights into content performance, customer engagement, and how sales teams utilized content . This data-driven approach allowed the company to tailor content to specific customer needs and interests, optimizing it based on performance metrics and audience engagement . Furthermore, Paperflite enabled the company to create content that resonated with their target audience and inspired actionable insights, ultimately boosting sales . Overall, Paperflite helped unify the content strategy, aligning it with customer requirements and enhancing the effectiveness of sales and marketing collaboration ."
+    },
+    {
+        "input": {
+            "question": "How does Paperflite integrate with Salesforce",
+            "contexts": [
+                {
+                    "id": 1,
+                    "text": "This Statement of Work (SOW) outlines the collaboration between Innovaccer Inc. and Paperflite Inc. to provide a SAAS-based sales enablement and content management platform. The SOW, a supplement to the Master Technology Agreement, details the scope, specifications, support, and maintenance services, as well as the deployment timelines and milestones. \n\nThe Software, a comprehensive content management platform, empowers customer-facing teams to create, organize, distribute, and track content, providing valuable insights into buyer engagement and revenue contribution. The Vendor, Paperflite Inc., commits to providing technical support, white-labelling, and unlimited content storage and sharing capabilities. Additionally, the SOW includes a detailed project plan, outlining the deployment timelines and milestones, ensuring a seamless integration process.\n\nThe SOW also specifies the payment terms, with fees set at USD 400 per month, and a monthly payment schedule via card. The SOW is effective upon the last date signed and will continue unless terminated by the Client with a 30-day notice.\n\nThis SOW serves as a testament to the commitment of both parties to deliver a robust and tailored solution, enhancing Innovaccer's content management and sales enablement capabilities."
+                },
+                {
+                    "id": 2,
+                    "text": "This guide presents a comprehensive overview of integrating Paperflite with Salesforce, transforming Salesforce into a centralized hub for Sales and Marketing teams. The integration offers users the ability to seamlessly access Paperflite within Salesforce, share content, track engagement activities, and receive high-performing content recommendations tailored to each opportunity. \n\nThe guide is divided into four parts, each detailing essential steps for leveraging the integration. Part 1 focuses on accessing Paperflite within Salesforce, eliminating the need to switch between platforms. Part 2 outlines two methods for sharing content from Salesforce using Paperflite, including via the Chrome extension and the native Paperflite instance within Salesforce. \n\nPart 3 delves into tracking engagement within opportunities, providing insights on monitoring content engagement through various tabs and activities. Lastly, Part 4 highlights the process of receiving content recommendations within sales reps' workflow, including mapping custom fields on Salesforce to Paperflite and setting up the AI engine to recommend relevant content based on deal stages, geography, and use case.\n\nThis guide serves as a valuable resource for Sales and Marketing teams seeking to streamline their processes, enhance collaboration, and leverage data-driven insights to drive successful outcomes."
+                },
+                {
+                    "id": 3,
+                    "text": "Paperflite's seamless integration with Salesforce offers a game-changing solution for sales professionals. By following three simple steps, users can effortlessly integrate Paperflite with Salesforce, revolutionizing their sales process. The first step involves downloading Paperflite's Chrome extension, which allows for easy access and utilization. Once integrated, users can conveniently send emails with content from Paperflite, providing a streamlined and efficient communication process with leads and contacts. Additionally, the integration provides valuable insights into content engagement, including metrics such as time spent on collateral, re-shares, and downloads. This comprehensive approach empowers sales teams to make data-driven decisions and track the impact of their content on revenue generation. With the ability to attribute revenue to specific content, Paperflite's integration with Salesforce offers a powerful tool for optimizing sales strategies. This innovative solution not only enhances the user experience but also provides a competitive edge in the dynamic sales landscape."
+                },
+                {
+                    "id": 4,
+                    "text": "PAPERFLITE INTEGRATIONS INTEGRATING WITH SALESFORCE"
+                },
+                {
+                    "id": 5,
+                    "text": "Paperflite Recurring Meeting Schedule"
+                },
+                {
+                    "id": 6,
+                    "text": "Paperflite x Salesforce This guide walks users through integrating Paperflite with Salesforce and making Salesforce a one - stop shop for Sales and Marketing teams With this integration users can : \u2022 Access Paperflite on Salesforce ( Native App Integration ) \u2022 Share content via Salesforce \u2022 Track Engagement Activity"
+                }
+            ]
+        },
+        "expected_output": "Paperflite integrates with Salesforce by allowing users to access Paperflite directly within the Salesforce platform, effectively making it a centralized hub for Sales and Marketing teams. This integration enables users to share content, track engagement activities, and receive tailored content recommendations based on specific opportunities. The integration process involves three simple steps: first, downloading the Paperflite Chrome extension; second, setting up the integration within Paperflite by authenticating with Salesforce; and third, using the extension to send emails and view content engagement metrics such as time spent on collateral and downloads. This comprehensive integration empowers sales teams to make data-driven decisions and optimize their sales strategies by attributing revenue to specific content shared through Salesforce  ."
+    },
+    {
+        "input": {
+            "question": "How does Seek enhance Paperflite?",
+            "contexts": [
+                {
+                    "id": 1,
+                    "text": "\"Seek in Fliteview\" revolutionizes content consumption within Fliteview, offering users an interactive and dynamic experience. This feature, powered by OpenAI's Generative AI model, enables users to ask questions, obtain summaries, and navigate content in real time. The Seek icon, easily accessible within the Fliteview asset viewer, signifies the presence of interactive content search. Upon clicking the Seek icon, users are presented with a slider offering pre-defined prompts and a custom query field for personalized interactions. This allows for a seamless and engaging experience, with the ability to ask follow-up questions and receive contextual responses. Seek supports various document types shared via Fliteview, making it a versatile tool for content consumption. By incorporating advanced AI search capabilities, Fliteview not only enhances user experience but also positions itself as an essential tool for efficient and effective content consumption. For further assistance, users can reach out to support@paperflite.com or chat with the team via the pop-up at the bottom right corner of the screen."
+                },
+                {
+                    "id": 2,
+                    "text": "Paperflite's proposal response to Daikin U.S. Corporation's Request for Proposal (RFP) for a Cloud Platform for Communication Asset Storage and Sharing is a testament to our commitment to delivering a transformative solution tailored to meet and exceed Daikin's strategic communication objectives. Crafted with the aim of centralizing and enlivening the engagement with communication assets, our proposal outlines a comprehensive platform that not only manages and shares assets but also drives engagement, fosters collaboration, and enhances the overall impact of Daikin's communication strategy.\n\nAt the heart of our offering is not just the advanced technology of our platform but also our dedication to partnership, flexibility, and innovation. We understand the critical role that seamless communication and information flow play in today's business landscape, and our solution is designed to address these challenges head-on.\n\nOur proposal provides a detailed exploration of the technical capabilities of our platform, emphasizing support for a wide range of file types and user engagement needs. Additionally, we've outlined a meticulous onboarding process, emphasizing a mix of in-person and online engagement to ensure a seamless integration of our platform into Daikin's operations.\n\nFurthermore, our governance framework is structured to foster ongoing alignment with Daikin\u2019s strategic goals, ensuring that our partnership not only addresses immediate needs but is poised to adapt to future challenges and opportunities.\n\nWe are excited about the prospect of contributing to Daikin's journey towards a more integrated, efficient, and impactful communication strategy. Our aim is not just to meet the expectations laid out in the RFP but to exceed them, providing Daikin with a platform that sets new standards in how communication assets are managed and utilized to drive business success."
+                },
+                {
+                    "id": 3,
+                    "text": "Seek, an innovative search functionality powered by OpenAI's Generative AI model, has revolutionized content search and retrieval for Paperflite users. This advanced tool enables swift access to documents, boosts productivity, and delivers tailored and timely information to prospects. Seek's accuracy and relevance are continuously improved through AI-driven capabilities, ensuring that users can effortlessly find the information they need. Moreover, Seek can search across various document types, providing a comprehensive solution for content retrieval.\n\nThe integration of OpenAI's capabilities into Seek further enhances its functionality, allowing it to process and understand natural language queries, providing contextually accurate search results. Paperflite's commitment to data privacy and security is evident through its adherence to OpenAI's API data privacy guidelines and SOC2 compliance standards, ensuring the confidentiality and protection of customer data.\n\nTo optimize Seek's usage, best practices such as choosing descriptive document names, including keywords and metadata, and prioritizing text-rich content are recommended. Additionally, clear and concise descriptions, experimenting with prompts, contextualization for precision, iterative refinement, and feedback loop enhancement are highlighted as key strategies to improve search results.\n\nIn essence, Seek represents a powerful tool that not only locates documents but also unravels their intricacies, shaping an environment of seamless knowledge exchange and prospect engagement. With its advanced capabilities and commitment to data privacy and security, Seek stands as a game-changing solution for content management and sales enablement."
+                },
+                {
+                    "id": 4,
+                    "text": "Seek in Fliteview Enhancing Content Interactivity Overview \"Seek in Fliteview\" is designed to enhance the user experience within Fliteview \u2013 the content viewer used by end users to access shared content from Paper\ufb02ite."
+                },
+                {
+                    "id": 5,
+                    "text": "(Paperflite Confirms YES) 3.5 Search Function Revolutionizing Search with Generative AI Paperflite redefines content discovery with its innovative search technologies, SmartSearch and SEEK, both designed to cater to the sophisticated needs of today's digital workspace."
+                },
+                {
+                    "id": 6,
+                    "text": "Table Of Contents Introduction.................................................................................................................................."
+                }
+            ]
+        },
+        "expected_output": "Seek enhances Paperflite by revolutionizing content search and retrieval, providing users with accurate and contextually relevant results that enable them to find the information they need quickly and effortlessly. This advanced functionality, powered by OpenAI's Generative AI model, allows for swift access to documents, boosting productivity and enhancing prospect engagement by delivering tailored and timely information. Additionally, Seek supports various document types, ensuring comprehensive coverage of digital assets, and its ability to understand natural language queries further improves the relevance of search outcomes with each interaction ."
+    },
+    {
+        "input": {
+            "question": "How many observations were used to calculte this effect:",
+            "contexts": [
+                {
+                    "id": 1,
+                    "text": "This paper uses for the first time program administrative data from Brazil\u2019s National Employment System (SINE) to assess the impact of SINE job interview referrals on labor market outcomes. Data for the five-year period 2012-2016 is used to evaluate the impact of SINE on employment probability, wage rates, time until reemployment and job tenure. Difference-in-differences estimates suggest that a SINE job interview referral increases the probability of finding a job within three months of the referral, and reduces the number of months to find reemployment, the average job tenure of the next job and the reemployment wage. Subgroup analysis suggests that compared to more educated workers, SINE is more effective in helping less educated workers by increasing their probability of finding a job and reducing time until reemployment. Finally, the evidence suggests that online labor exchange is less effective than the service provided in person at SINE offices.<br/><br/>URL: https://publications.iadb.org/publications/english/document/The_Effect_of_Job_Referrals_on_Labor_Market_Outcomes_in_Brazil.pdf"
+                },
+                {
+                    "id": 2,
+                    "text": "*** (0.0056) Observations 9,553,448 5,054,166 6,842,516 9,600,529 AGE 35-44 Control group from SINE 0.212*** (0.00804) -0.588*** (0.0612) -2.332*** (0.405) -0.0498"
+                },
+                {
+                    "id": 3,
+                    "text": "AGE 18 - 24 0.205 * * * -1.605 * * * -0.695 * * * -0.0450 * * * Control group from RAIS ( 0.0105 ) ( 0.0675 ) ( 0.0418 ) ( 0.00293 ) Observations 7,933,968 3,704,468 5,951,694 7,995,836 AGE 25 - 34 0.219 * * * -1.207"
+                },
+                {
+                    "id": 4,
+                    "text": "0.00686 ) Observations 2,230,752 1,024,086 1,519,686 2,240,483 AGE 55 - 64 0.195 * * * -0.766 * * * -1.931 * * *"
+                }
+            ]
+        },
+        "expected_output": "I cannot answer your query because I do not have enough information."
+    },
+    {
+        "input": {
+            "question": "How much financial assistance has the IDB provided to Guatemala?",
+            "contexts": [
+                {
+                    "id": 1,
+                    "text": "One of the The Bank supports Guatemala\u2019s efforts to substantially reduce poverty and to incorporate large sectors of the population, now excluded from many of the benefits of society, into the economic and social mainstream."
+                },
+                {
+                    "id": 2,
+                    "text": "Under the initiative this majority, historically excluded from the benefits of growth, is viewed as an asset\uf8e7a large market of producers and consumers and partners in society capable of generating greater wealth."
+                },
+                {
+                    "id": 3,
+                    "text": "Other 1 % Environment and natural disasters 4 % Energy , transportation , and telecommunications 31 % Agriculture and rural development 7 % Industry , tourism , science and technology 7 % Urban development 8 % Reform and public sector modernization 16 % Social investment 26 % \u0016 Figure 1"
+                }
+            ]
+        },
+        "expected_output": "I cannot answer your query because I do not have enough information."
+    }
+]
