@@ -34,9 +34,6 @@ def render_test_data_upload():
             st.success(f"Loaded {len(test_data)} test cases")
             with st.expander("View Test Data"):
                 st.write(test_data)
-            logger.info(
-                f"Successfully loaded {len(test_data)} test cases from uploaded file."
-            )
         except Exception as e:
             st.error(f"Error loading test data: {e}")
             logger.error(f"Error loading test data: {e}")
