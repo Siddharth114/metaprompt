@@ -30,4 +30,5 @@ def generate_initial_prompt(temperature=0.7):
 
     logger.info("Generating initial prompt.")
     messages = [{"role":"system", "content": system_prompt}]
-    return call_openai(messages=messages, temperature=temperature)
+    response, prompt_tokens, completion_tokens = call_openai(messages=messages, temperature=temperature)
+    return response, prompt_tokens, completion_tokens

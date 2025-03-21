@@ -96,13 +96,15 @@ Ensure you fully understand the criteria before starting the evaluation. Use the
         {"role": "system", "content": system_prompt},
         {"role": "user", "content": user_prompt},]
     
-    response = call_openai(messages=messages, json_format=True, temperature=1)
+    response, prompt_tokens, completion_tokens = call_openai(messages=messages, json_format=True, temperature=1)
     
     response_json = json.loads(response)
     
     result = response_json["result"]
     
-    return result in ['Improvement', 'Information Gain', 'Similar']
+    is_correct = result in ['Improvement', 'Information Gain', 'Similar']
+    
+    return is_correct, prompt_tokens, completion_tokens
     
 
 def evaluate_prompt(prompt, test_data):
@@ -110,6 +112,11 @@ def evaluate_prompt(prompt, test_data):
     correct = 0
     response_times = []
     evaluation_times = []
+    all_response_prompt_tokens = []
+    all_response_completion_tokens = []
+    
+    all_evaluation_prompt_tokens = []
+    all_evaluation_completion_tokens = []
     
     logger.info(f"Evaluating prompt with {len(test_data)} test cases.")
     for test_case in test_data:
@@ -120,20 +127,25 @@ def evaluate_prompt(prompt, test_data):
         messages = [{"role": "system", "content": prompt}, {"role": "user", "content":json.dumps(input_text)}]
 
         start_time = time.time()
-        actual_answer = call_openai(messages=messages)
+        actual_answer, response_prompt_tokens, response_completion_tokens = call_openai(messages=messages)
         end_time = time.time()
         
         response_time = end_time - start_time
         
         response_times.append(response_time)
+        all_response_prompt_tokens.append(response_prompt_tokens)
+        all_response_completion_tokens.append(response_completion_tokens)
 
         start_time = time.time()
-        is_correct = evaluate_answer(question, expected_answer, actual_answer)
+        is_correct, evaluation_prompt_tokens, evaluation_completion_tokens = evaluate_answer(question, expected_answer, actual_answer)
         end_time = time.time()
         
         evaluation_time = end_time - start_time
         
         evaluation_times.append(evaluation_time)
+        all_evaluation_prompt_tokens.append(evaluation_prompt_tokens)
+        all_evaluation_completion_tokens.append(evaluation_completion_tokens)
+        
         
         if is_correct:
             correct += 1
@@ -144,7 +156,11 @@ def evaluate_prompt(prompt, test_data):
             "actual": actual_answer,
             "correct": is_correct,
             "response_time": response_time,
-            "evaluation_time": evaluation_time
+            "response_prompt_tokens": response_prompt_tokens,
+            "response_completion_tokens": response_completion_tokens,
+            "evaluation_time": evaluation_time,
+            "evaluation_prompt_tokens": evaluation_prompt_tokens,
+            "evaluation_completion_tokens": evaluation_completion_tokens
         })
 
     accuracy = (correct / len(test_data)) * 100
@@ -154,7 +170,16 @@ def evaluate_prompt(prompt, test_data):
     average_response_time = round(sum(response_times) / len(response_times), 2)
     average_evaluation_time = round(sum(evaluation_times) / len(evaluation_times), 2)
     
+    average_response_prompt_tokens = round(sum(all_response_prompt_tokens) / len(all_response_prompt_tokens), 2)
+    average_response_completion_tokens = round(sum(all_response_completion_tokens) / len(all_response_completion_tokens), 2)
+    
+    average_evaluation_prompt_tokens = round(sum(all_evaluation_prompt_tokens) / len(all_evaluation_prompt_tokens))
+    average_evaluation_completion_tokens = round(sum(all_evaluation_completion_tokens) / len(all_evaluation_completion_tokens))
+    
     
     logger.info(f"Average response time per test case: {average_response_time} seconds")
     logger.info(f"Average evaluation time per test case: {average_evaluation_time} seconds")
-    return accuracy, results, average_response_time, average_evaluation_time
+    logger.info(f"Average response prompt tokens per test case: {average_response_prompt_tokens}")
+    logger.info(f"Average response completion tokens per test case: {average_response_completion_tokens}")
+    
+    return accuracy, results, average_response_time, average_evaluation_time, average_response_prompt_tokens, average_response_completion_tokens, average_evaluation_prompt_tokens, average_evaluation_completion_tokens

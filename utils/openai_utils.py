@@ -16,7 +16,7 @@ def call_openai(messages, temperature=0.0, json_format=False):
             temperature=temperature,
             response_format=response_format,
         )
-        return response.choices[0].message.content.strip()
+        return response.choices[0].message.content.strip(), response.usage.prompt_tokens, response.usage.completion_tokens
     except Exception as e:
         st.error(f"OpenAI API Error: {e}")
         logger.error(f"OpenAI API Error: {e}")
